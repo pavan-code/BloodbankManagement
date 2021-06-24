@@ -1,0 +1,45 @@
+.container {
+    // width: 30vw;
+    height: 70vh;
+    .spin {
+        text-align: center;
+        mat-spinner {
+            margin: 0 auto;
+        }
+    }
+    .form {
+        width: 350px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    small {
+        color: red;
+    }
+}
+span.asterisk{
+    font-size: 16px;
+    color: red;
+}
+
+button {
+    margin: 10px 0;
+    width: 100%;
+    background-color: rgb(245, 72, 41);
+    color: white;
+    font-size: 18px;
+}
+@media screen and (max-width:500px) {
+    .container {
+        width: 96%;
+        margin: 5px 10px;
+    }
+    h1 {
+        text-align: center;
+    }
+    .btn {
+        width: 100%;
+        margin-top: 5px;
+    }
+}

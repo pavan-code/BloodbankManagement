@@ -1,0 +1,41 @@
+.container {
+    width: 60vw;
+    height: auto;
+    padding: 20px;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;    
+}
+small {
+    color: red;
+}
+.col {
+    padding: 5px 10px;
+}
+.spin {
+    font-size: large;
+    text-align: center;
+    mat-spinner {
+        margin: 10px auto;
+    }
+}
+.w-50 {
+    width: 48%;
+}
+button {
+    background-color: rgb(213, 32, 0);
+}
+@media screen and (max-width: 500px) {
+    .container {
+        width: 96%;
+        margin: 5px 10px;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .w-50 {
+        width: 100%;
+    }
+}

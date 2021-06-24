@@ -1,0 +1,13 @@
+
+<mat-toolbar color="primary">
+    <button mat-button (click) = "home()">Blood bank management</button>
+    <span style="flex: 1 auto;"></span>
+    <button *ngIf = "!show" mat-raised-button routerLink='/register'> Register</button>
+    <button *ngIf = "!show" mat-button routerLink='/login'>Login</button>
+    <button *ngIf = "show && !isAdmin" mat-button routerLink='/requestBlood'>Request Blood</button>
+    <button *ngIf = "show" mat-button routerLink='/profile'>Profile</button>
+    <button *ngIf = "show" mat-button (click) = "logout()">Logout</button>
+</mat-toolbar>
+<div class="banner">
+    <h3>“Donate Blood And Be The Reason For A Smile On Someone’s Face.”</h3>
+</div>

@@ -1,0 +1,41 @@
+<div class="container">
+    <h1>Donor Details</h1>
+    <div class="spin" *ngIf = "!show">
+        <mat-spinner diameter='100' strokeWidth='3'></mat-spinner>
+        <br>
+        <p>Getting donor details..</p>
+    </div>
+    <div class="table" *ngIf = "show">
+        <h1 *ngIf = "donors.length == 0">No Donors available to display!!</h1>
+        <table *ngIf = "donors.length > 0" class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Email ID</th>
+                    <th>Mobile</th>
+                    <th>Blood group</th>
+                    <th>Gender</th>
+                    <th>DOB</th>
+                    <th>City</th>
+                    <th>District</th>
+                    <th>State</th>
+                    <th>Pincode</th>
+                </tr>
+            </thead>
+            <tr *ngFor = "let donor of donors; let i=index">
+                <th scope="row"> {{i + 1}} </th>
+                <td> {{donor.username}} </td>
+                <td> {{donor.email}} </td>
+                <td> {{donor.mobile}} </td>
+                <td class="blood"> {{donor.bloodGroup}} </td>
+                <td> {{donor.gender | uppercase | slice:0:1}} </td>
+                <td> {{donor.dob | date: 'shortDate'}} </td>
+                <td> {{donor.city}} </td>
+                <td> {{donor.district}} </td>
+                <td> {{donor.state}} </td>
+                <td> {{donor.pincode}} </td>
+            </tr>
+        </table>
+    </div>
+</div>

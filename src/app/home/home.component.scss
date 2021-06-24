@@ -1,0 +1,65 @@
+
+.contain {
+    background: url(../../assets/images/image.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 73vh;
+    h3.find {
+        font-size: 1.9rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    .form { 
+        position: relative;
+        width: 400px;
+        color: white;
+        padding: 20px;
+        left: 16%;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 1px solid lightgray;
+        border-radius: 8px;
+        background-color: rgb(65, 65, 65);
+        .spin {
+            mat-spinner {
+                margin: 0 auto;                
+            }
+            font-size: large;
+            text-align: center;
+        }
+    }
+    label {
+        letter-spacing: 1.2px;
+        font-weight: normal;
+    }
+}
+button {
+    background-color: white;
+    color: rgb(213, 32, 0);
+}
+.groups {
+    height: 200px;
+    padding: 10px ;
+    margin: 10px;
+    h1 {
+        text-align: center;
+    }
+    .cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        mat-card {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(240, 74, 45);
+            mat-card-content {
+                font-size: 35px;
+                text-align: center;
+                span {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

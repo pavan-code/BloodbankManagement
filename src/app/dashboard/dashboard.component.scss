@@ -1,0 +1,17 @@
+.container {
+    height: 28vh;
+    .cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        mat-card {
+            cursor: pointer;
+            width: auto;
+            margin: 10px;
+            h1 {
+                font-size: 40px;
+                color: rgb(213, 32, 0);
+            }
+        }
+    }
+}

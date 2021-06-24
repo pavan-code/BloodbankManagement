@@ -1,0 +1,18 @@
+.main {
+    height: auto;
+    border-bottom: 1px solid lightgray;
+    span {
+        color: red;
+        font-weight: bold;
+        font-size: larger;
+    }
+    table {
+        position: relative;
+        width: 80vw;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    h1 {
+        text-align: center;
+    }
+}

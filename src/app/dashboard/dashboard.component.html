@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Admin Dashboard</h1>
+    <div class="cards">
+       
+        <mat-card routerLink='/admin/all-donors'>
+            <mat-card-content>
+                <h2>Total Donors</h2>
+                <mat-spinner *ngIf = "!totalDonors" diameter='25' strokeWidth='3'></mat-spinner>
+                <h1 *ngIf = "totalDonors"> {{totalDonors}} </h1>
+            </mat-card-content>
+        </mat-card>
+        <mat-card routerLink = '/admin/blood-requests'>
+            <mat-card-content>
+                <h2>Total Blood Requests</h2>
+                <mat-spinner *ngIf = "!totalRequests" diameter='25' strokeWidth='3'></mat-spinner>
+
+                <h1 *ngIf = "totalRequests"> {{totalRequests}} </h1>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

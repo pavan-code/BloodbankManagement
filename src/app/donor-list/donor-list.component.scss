@@ -1,0 +1,12 @@
+.blood {
+    color: red;
+    font-weight: bold;
+    font-size: larger;
+}
+.spin {
+    text-align: center;
+    font-size: large;
+    mat-spinner {
+        margin: 10px auto;
+    }
+}

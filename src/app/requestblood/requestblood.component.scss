@@ -1,0 +1,65 @@
+div::-webkit-scrollbar {
+    width: 0.2rem;
+    // background-color: red;
+}
+div::-webkit-scrollbar-thumb {
+    background-color: red;
+}
+.spin {
+    text-align: center;
+    font-size: large;
+    mat-spinner {
+        margin: 0 auto;
+    }
+}
+small {
+    color: red;
+    
+}
+.container {
+    // width: 40vw;
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .form {
+        width: 40vw;
+    }
+    .requests {
+        width: 25vw;
+        mat-card {
+            padding: 5px 3px;
+            margin-right: 5px;
+        }
+       
+        .scroll {
+            height: 57vh;
+            overflow-y: auto;
+            // border: 1px solid black;
+            
+        }
+        mat-card-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+           
+            .group {
+                width: 70px;
+                height: 65px;
+                background-color: rgb(243, 39, 39);
+                border-radius: 8px;
+                color: white;
+                font-size: 30px;
+                line-height: 60px;                
+                text-align: center;
+            }
+            .details {                
+                height: auto;   
+                width: 110px;
+                
+                // border: 1px solid black;             
+            }
+        }
+    }
+}

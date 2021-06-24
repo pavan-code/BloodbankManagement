@@ -1,0 +1,150 @@
+<div class="container">
+    <div class="spin" *ngIf = "!show">
+        <mat-spinner diameter='100' strokeWidth='3'></mat-spinner>
+        <br>
+        <p>Registering New Donor..</p>
+    </div>
+    <div class="form" *ngIf = "show">
+        <!-- {{register.value | json}} -->
+        <form action="" class='form' [formGroup]="register">
+            <div class='login-information'>
+                <h2>User Information</h2>
+                <div class="row">
+                    <div class='form-field col w-50'>
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" formControlName="username" class='form-control'>
+                        <small *ngIf = "formErrors.username">
+                            {{formErrors.username}}
+                        </small>
+                    </div>
+                    <div class='form-field col w-50'>
+                        <label for="email">Email ID</label>
+                        <input type="email" name="email" id="email" formControlName="email" class="form-control">
+                        <small *ngIf = "formErrors.email">
+                            {{formErrors.email}}
+                        </small>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-field col w-50">
+                        <label for="mobile">Mobile No.</label>
+                        <input type="text" name="mobile" id="mobile" formControlName="mobile" class="form-control">
+                        <small *ngIf = "formErrors.mobile">
+                            {{formErrors.mobile}}
+                        </small>
+                    </div>
+                    <div class="form-field col w-50">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" formControlName="password" class="form-control">
+                        <small *ngIf = "formErrors.password">
+                            {{formErrors.password}}
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="donor-information">
+                <!-- <h2>Donor Information</h2> -->
+                <div class="row">                    
+                    <div class="form-field col w-50">
+                        <label for="bloodgroup">Blood Group</label>
+                        <select class="form-select form-control" name="blood" id="blood" formControlName="bloodGroup">
+                            <option selected value=""></option>
+                            <option value="dont know">Don't know</option>
+                            <option value="A-">A-</option>
+                            <option value="A+">A+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="B-">B-</option>
+                            <option value="B+">B+</option>
+                            <option value="O-">O-</option>
+                            <option value="O+">O+</option>
+                        </select>
+                        <small *ngIf = "formErrors.bloodGroup">
+                            {{formErrors.bloodGroup}}
+                        </small>
+                    </div>
+                    <div class="form-field col w-50">
+                        <label for="gender">Gender</label>
+                        <select class="form-control" name="gender" id="gender" formControlName="gender">
+                            <option selected value=""></option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="others">Others</option>
+                        </select>
+                        <small *ngIf = "formErrors.gender">
+                            {{formErrors.gender}}
+                        </small>
+                    </div>
+                </div>
+                <div class="row">                    
+                    <div class="form-group col w-50">
+                        <label for="dob">DOB</label>
+                        <input class="form-control" type="date" name="dob" id="dob" formControlName="dob">
+                        <small *ngIf = "formErrors.dob">
+                            {{formErrors.dob}}
+                        </small>
+                    </div>
+                    <div class="form-group col w-50">
+                        <label for="weight">Weight</label>
+                        <input class="form-control" type="number" name="weight" id="weight" formControlName="weight">
+                        <small *ngIf = "formErrors.weight">
+                            {{formErrors.weight}}
+                        </small>
+                    </div>
+                </div>
+            </div> 
+            <div class="contact-information">
+                <!-- <h2>Contact Information</h2> -->
+                <div class="row">   
+                    <div class="form-group col w-50">
+                        <label for="state">State</label>
+                        <select (change)="changeState($event)" name="state" id="state" class="form-control" formControlName="state">
+                            <option value="">--Select State--</option>
+                            <option value="{{state.name}}" *ngFor = "let state of states">
+                                {{state.name}}
+                            </option>                          
+                        </select>
+                        <small *ngIf = "formErrors.state">
+                            {{formErrors.state}}
+                        </small>
+                    </div>   
+                    <div class="form-group col w-50">
+                        <label for="district">District</label>
+                        <select name="district" id="district" class="form-control" formControlName="district">
+                            <option value="" selected>--Select District--</option>
+                            <option value="{{district}}" *ngFor = "let district of districts">
+                                {{district}}
+                            </option>
+                        </select>
+                        <small *ngIf = "formErrors.district">
+                            {{formErrors.district}}
+                        </small>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="form-group col w-50">
+                        <label for="city">City or Village</label>
+                        <input class="form-control" type="text" name="city" id="city" formControlName="city">
+                        <small *ngIf = "formErrors.city">
+                            {{formErrors.city}}
+                        </small>
+                    </div>
+                    <div class="form-group col w-50">
+                        <label for="pin">Pin code</label>
+                        <input class="form-control" type="number" name="pincode" id="pincode" formControlName="pincode">
+                        <small *ngIf = "formErrors.pincode">
+                            {{formErrors.pincode}}
+                        </small>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="agree" id="agree"> I agree <a href="#">Terms & Conditions</a> <br>
+                <span>Already Registered? Login <a href="/login">here</a></span>
+            </div>
+            <button type='button' [disabled]="register.invalid" mat-raised-button (click)="getRegister()">Submit</button>
+        </form>
+    </div>
+</div>
