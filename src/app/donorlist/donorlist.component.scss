@@ -1,6 +1,7 @@
 .main {
     height: auto;
     border-bottom: 1px solid lightgray;
+    
     span {
         color: red;
         font-weight: bold;
@@ -14,5 +15,17 @@
     }
     h1 {
         text-align: center;
+    }
+}
+@media screen and (max-width: 500px) {
+    .main {
+        table {
+            left: 0%;
+            transform: translateX(-0%);
+         
+        }
+        .list {
+            overflow-x: auto;
+        }
     }
 }

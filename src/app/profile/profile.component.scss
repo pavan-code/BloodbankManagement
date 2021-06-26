@@ -1,8 +1,17 @@
 .container {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
 }
 .table {
     width: 40vw;
+}
+@media screen and (max-width: 500px) {
+    .container {
+        margin: 10px auto;
+        .details {
+            table {
+                width: 100%;
+            }
+        }
+    }
 }

@@ -10,14 +10,14 @@
             <div class='login-information'>
                 <h2>User Information</h2>
                 <div class="row">
-                    <div class='form-field col w-50'>
+                    <div class='form-field col'>
                         <label for="username">Username</label>
                         <input type="text" name="username" id="username" formControlName="username" class='form-control'>
                         <small *ngIf = "formErrors.username">
                             {{formErrors.username}}
                         </small>
                     </div>
-                    <div class='form-field col w-50'>
+                    <div class='form-field col'>
                         <label for="email">Email ID</label>
                         <input type="email" name="email" id="email" formControlName="email" class="form-control">
                         <small *ngIf = "formErrors.email">
@@ -26,14 +26,14 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="form-field col w-50">
+                    <div class="form-field col">
                         <label for="mobile">Mobile No.</label>
                         <input type="text" name="mobile" id="mobile" formControlName="mobile" class="form-control">
                         <small *ngIf = "formErrors.mobile">
                             {{formErrors.mobile}}
                         </small>
                     </div>
-                    <div class="form-field col w-50">
+                    <div class="form-field col">
                         <label for="password">Password</label>
                         <input type="password" name="password" id="password" formControlName="password" class="form-control">
                         <small *ngIf = "formErrors.password">
@@ -45,7 +45,7 @@
             <div class="donor-information">
                 <!-- <h2>Donor Information</h2> -->
                 <div class="row">                    
-                    <div class="form-field col w-50">
+                    <div class="form-field col">
                         <label for="bloodgroup">Blood Group</label>
                         <select class="form-select form-control" name="blood" id="blood" formControlName="bloodGroup">
                             <option selected value=""></option>
@@ -63,7 +63,7 @@
                             {{formErrors.bloodGroup}}
                         </small>
                     </div>
-                    <div class="form-field col w-50">
+                    <div class="form-field col">
                         <label for="gender">Gender</label>
                         <select class="form-control" name="gender" id="gender" formControlName="gender">
                             <option selected value=""></option>
@@ -77,14 +77,14 @@
                     </div>
                 </div>
                 <div class="row">                    
-                    <div class="form-group col w-50">
+                    <div class="form-group col">
                         <label for="dob">DOB</label>
                         <input class="form-control" type="date" name="dob" id="dob" formControlName="dob">
                         <small *ngIf = "formErrors.dob">
                             {{formErrors.dob}}
                         </small>
                     </div>
-                    <div class="form-group col w-50">
+                    <div class="form-group col">
                         <label for="weight">Weight</label>
                         <input class="form-control" type="number" name="weight" id="weight" formControlName="weight">
                         <small *ngIf = "formErrors.weight">
@@ -94,9 +94,8 @@
                 </div>
             </div> 
             <div class="contact-information">
-                <!-- <h2>Contact Information</h2> -->
                 <div class="row">   
-                    <div class="form-group col w-50">
+                    <div class="form-group col">
                         <label for="state">State</label>
                         <select (change)="changeState($event)" name="state" id="state" class="form-control" formControlName="state">
                             <option value="">--Select State--</option>
@@ -108,7 +107,7 @@
                             {{formErrors.state}}
                         </small>
                     </div>   
-                    <div class="form-group col w-50">
+                    <div class="form-group col">
                         <label for="district">District</label>
                         <select name="district" id="district" class="form-control" formControlName="district">
                             <option value="" selected>--Select District--</option>
@@ -119,25 +118,23 @@
                         <small *ngIf = "formErrors.district">
                             {{formErrors.district}}
                         </small>
-                    </div>
-                    
+                    </div>                    
                 </div>
                 <div class="row">
-                    <div class="form-group col w-50">
+                    <div class="form-group col">
                         <label for="city">City or Village</label>
                         <input class="form-control" type="text" name="city" id="city" formControlName="city">
                         <small *ngIf = "formErrors.city">
                             {{formErrors.city}}
                         </small>
                     </div>
-                    <div class="form-group col w-50">
+                    <div class="form-group col">
                         <label for="pin">Pin code</label>
                         <input class="form-control" type="number" name="pincode" id="pincode" formControlName="pincode">
                         <small *ngIf = "formErrors.pincode">
                             {{formErrors.pincode}}
                         </small>
-                    </div>
-                   
+                    </div>                   
                 </div>
             </div>
             <div class="form-group">

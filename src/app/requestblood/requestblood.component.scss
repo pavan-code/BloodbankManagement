@@ -5,6 +5,9 @@ div::-webkit-scrollbar {
 div::-webkit-scrollbar-thumb {
     background-color: red;
 }
+label {
+    font-weight: bold;
+}
 .spin {
     text-align: center;
     font-size: large;
@@ -60,6 +63,22 @@ small {
                 
                 // border: 1px solid black;             
             }
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        
+        .form {
+            width: 100%;
+            padding: 20px 0;
+            border-bottom: 1px solid lightgray;
+        }
+        .requests {
+            margin: 20px 0;
+            width: 100%;
         }
     }
 }

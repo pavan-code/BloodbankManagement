@@ -39,7 +39,7 @@ button {
     color: rgb(213, 32, 0);
 }
 .groups {
-    height: 200px;
+    // height: 200px;
     padding: 10px ;
     margin: 10px;
     h1 {
@@ -60,6 +60,47 @@ button {
                     font-size: 20px;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .groups .cards {
+        // padding: 20px;
+        // border: 1px solid black;
+        display: flex;
+        // flex-direction: column;
+        flex-wrap: wrap;
+        mat-card {
+            margin: 2px 0;
+        }
+    }
+    .contain 
+    {
+        // background: url(../../assets/images/image.jpg) no-repeat;
+        background-image: none !important;
+        background-size: cover;
+        background-position: center;
+        border-bottom: 1px solid lightgray;
+        height: 50vh;
+        .form { 
+        position: relative;
+        width: 400px;
+        color: white;
+        padding: 20px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid lightgray;
+        border-radius: 8px;
+        background-color: rgb(65, 65, 65);
+        .spin {
+            mat-spinner {
+                margin: 0 auto;                
+            }
+            font-size: large;
+            text-align: center;
+        }
         }
     }
 }

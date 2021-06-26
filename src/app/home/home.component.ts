@@ -41,9 +41,9 @@ export class HomeComponent implements OnInit {
 
   createForm() {
     this.find = this.fb.group({
-      blood: [''],
-      state: [''],
-      district: [''],      
+      blood: ['', [Validators.required]],
+      state: ['', [Validators.required]],
+      district: ['', [Validators.required]],      
     })
   }
   changeState(event: any) { 
